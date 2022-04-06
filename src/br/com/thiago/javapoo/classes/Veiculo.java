@@ -8,11 +8,11 @@ public class Veiculo {
 	public Integer quantidadeRodas;
 	
 	public void ligar() {
-		
+		System.out.println("O veiculo ligou");
 	}
 	
 	public void desligar() {
-		
+		System.out.println("O veiculo desligou");
 	}
 	
 	public float abastecer(float litros) {
