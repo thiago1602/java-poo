@@ -10,7 +10,7 @@ public class Main {
 			Veiculo corsa = new Veiculo();
 			corsa.setMarca("GM");
 			corsa.setNome("Corsa");
-			corsa.setChassi("ABCDEf");
+			corsa.setChassi("ABCDEF");
 			corsa.abastecer(10);
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());

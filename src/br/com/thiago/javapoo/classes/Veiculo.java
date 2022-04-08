@@ -1,5 +1,7 @@
 package br.com.thiago.javapoo.classes;
 
+import br.com.thiago.javaoo.excecoes.ChassiInvalidoException;
+
 public class Veiculo {
 
 	private String nome;
@@ -32,7 +34,7 @@ public class Veiculo {
 		if(chassi.length() == 5) {
 			this.chassi = chassi;	
 		}else {
-			throw new Exception("Chassi inválido");
+			throw new ChassiInvalidoException(chassi);
 		}
 		
 	}
