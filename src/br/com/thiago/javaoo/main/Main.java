@@ -1,13 +1,13 @@
 package br.com.thiago.javaoo.main;
 
-import br.com.thiago.javapoo.classes.Veiculo;
+import br.com.thiago.javapoo.classes.Carro;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 		try {
-			Veiculo corsa = new Veiculo();
+			Carro corsa = new Carro();
 			corsa.setMarca("GM");
 			corsa.setNome("Corsa");
 			corsa.setChassi("ABCDEF");

@@ -1,5 +1,5 @@
 package br.com.thiago.javapoo.classes;
 
-public class Carro {
+public class Carro extends Veiculo {
 
 }
