@@ -7,7 +7,7 @@ public class Veiculo {
 	private String nome;
 	private String marca;
 	private String chassi;
-	private Integer quantidadeRodas;
+	protected Integer quantidadeRodas;
 	private float quantidadeCombustivel;
 	
 	public String getNome() {
@@ -41,10 +41,6 @@ public class Veiculo {
 
 	public Integer getQuantidadeRodas() {
 		return quantidadeRodas;
-	}
-
-	public void setQuantidadeRodas(Integer quantidadeRodas) {
-		this.quantidadeRodas = quantidadeRodas;
 	}
 
 	public float getQuantidadeCombustivel() {
