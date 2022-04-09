@@ -17,7 +17,8 @@ public class Main {
 			
 			Veiculo honda = new Moto();
 			honda.setNome("Fan");
-			
+			corsa.preparar();
+			honda.preparar();
 			((Carro)corsa).setQuantidadePortas(5);
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());
