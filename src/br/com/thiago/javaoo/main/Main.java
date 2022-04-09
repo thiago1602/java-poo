@@ -17,6 +17,8 @@ public class Main {
 			System.out.println(corsa.getNome());
 			System.out.println(corsa.getQuantidadeCombustivel());
 			System.out.println(corsa.getQuantidadeRodas());
+			System.out.println(String.format(""
+					+ "O veiculo %s esta ligado %b", corsa.getNome(), corsa.isLigado()));
 			corsa.ligar();
 			Carro celta = new Carro();
 		} catch (Exception e) {
