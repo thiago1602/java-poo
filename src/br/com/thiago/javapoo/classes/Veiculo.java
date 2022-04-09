@@ -1,5 +1,6 @@
 package br.com.thiago.javapoo.classes;
 
+import br.com.thiago.javaoo.excecoes.AbastecimentoVeiculoLigadoException;
 import br.com.thiago.javaoo.excecoes.ChassiInvalidoException;
 
 public class Veiculo {
@@ -66,7 +67,10 @@ public class Veiculo {
 		System.out.println("O veiculo desligou");
 	}
 	
-	public void abastecer(float litros) {
-		quantidadeCombustivel += litros;
+	public void abastecer(float litros) throws AbastecimentoVeiculoLigadoException {
+		if(this.ligado) {
+			quantidadeCombustivel += litros;
+		}
+		throw new AbastecimentoVeiculoLigadoException();
 	}
 }

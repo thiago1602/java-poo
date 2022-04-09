@@ -2,6 +2,8 @@ package br.com.thiago.javapoo.classes;
 
 public class Carro extends Veiculo {
 
+	private int quantidadePortas;
+	
 	
 	public Carro() {
 		this.quantidadeRodas = 4;
@@ -18,5 +20,13 @@ public class Carro extends Veiculo {
 	
 	public Carro(float combustivel, String nome) {
 		
+	}
+
+	public int getQuantidadePortas() {
+		return quantidadePortas;
+	}
+
+	public void setQuantidadePortas(int quantidadePortas) {
+		this.quantidadePortas = quantidadePortas;
 	}
 }
