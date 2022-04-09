@@ -12,7 +12,7 @@ public class Main {
 		try {		
 			Veiculo corsa = new Carro("Corsa", "GM");
 			corsa.setChassi("ABCDF");
-			corsa.abastecer(10);
+//			corsa.abastecer(10);
 			
 			Veiculo honda = new Moto();
 			honda.setNome("Fan");
@@ -23,10 +23,11 @@ public class Main {
 			System.out.println(corsa.getQuantidadeRodas());
 			System.out.println(String.format(""
 					+ "O veiculo %s esta ligado %b", corsa.getNome(), corsa.isLigado()));
-			corsa.abastecer(10);
 			corsa.ligar();
-			corsa.abastecer(5);
-			
+			corsa.acelerar();
+			System.out.println(String.format("Velocidade atual : %f", corsa.getVelocidade()));
+			corsa.frear();
+			System.out.println(String.format("Velocidade atual : %f", corsa.getVelocidade()));
 		}catch(AbastecimentoVeiculoLigadoException e) {
 			System.out.println("Carro esta ligado, por favor desligar");
 		}

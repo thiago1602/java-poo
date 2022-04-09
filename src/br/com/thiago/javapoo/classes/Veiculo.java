@@ -1,7 +1,9 @@
 package br.com.thiago.javapoo.classes;
 
 import br.com.thiago.javaoo.excecoes.AbastecimentoVeiculoLigadoException;
+import br.com.thiago.javaoo.excecoes.AceleracaoVeiculoLigadoException;
 import br.com.thiago.javaoo.excecoes.ChassiInvalidoException;
+import br.com.thiago.javaoo.excecoes.FrenagemVeiculoException;
 
 public class Veiculo {
 
@@ -11,9 +13,11 @@ public class Veiculo {
 	protected Integer quantidadeRodas;
 	private float quantidadeCombustivel;
 	protected Boolean ligado;
+	protected float velocidade;
 	
 	public Veiculo() {
 		this.ligado = false;
+		this.velocidade = 0;
 	}
 	public String getNome() {
 		return nome;
@@ -57,13 +61,19 @@ public class Veiculo {
 		return quantidadeCombustivel;
 	}
 
+	public float getVelocidade() {
+		return velocidade;
+	}
+	
 	public void ligar() {
 		this.ligado = true;
+		this.velocidade = 0;
 		System.out.println("O veiculo ligou");
 	}
 	
 	public void desligar() {
 		this.ligado = false;
+		this.velocidade = 0;
 		System.out.println("O veiculo desligou");
 	}
 	
@@ -72,5 +82,21 @@ public class Veiculo {
 			quantidadeCombustivel += litros;
 		}
 		throw new AbastecimentoVeiculoLigadoException();
+	}
+	
+	public void acelerar() throws AceleracaoVeiculoLigadoException {
+		if(this.ligado) {
+			this.velocidade +=10;
+		}else {
+			throw new AceleracaoVeiculoLigadoException();
+		}
+	}
+	
+	public void frear() throws FrenagemVeiculoException {
+		if(this.ligado) {
+			this.velocidade -=10;
+		}else {
+			throw new FrenagemVeiculoException();
+		}
 	}
 }
