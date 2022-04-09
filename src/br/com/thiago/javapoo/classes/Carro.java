@@ -29,4 +29,10 @@ public class Carro extends Veiculo {
 	public void setQuantidadePortas(int quantidadePortas) {
 		this.quantidadePortas = quantidadePortas;
 	}
+
+	@Override
+	public void preparar() {
+
+		System.out.println("COLOCAR CINTO DE SEGURANÇA");
+	}
 }

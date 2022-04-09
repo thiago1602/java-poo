@@ -3,7 +3,7 @@ package br.com.thiago.javapoo.classes;
 import br.com.thiago.javaoo.excecoes.AceleracaoVeiculoLigadoException;
 import br.com.thiago.javaoo.excecoes.FrenagemVeiculoException;
 
-public class Moto extends Veiculo {
+ public class Moto extends Veiculo {
 
 	public Moto() {
 		this.quantidadeRodas = 2;
@@ -31,5 +31,10 @@ public class Moto extends Veiculo {
 		}else {
 			throw new FrenagemVeiculoException();
 		}
+	}
+
+	@Override
+	public void preparar() {
+		System.out.println("COLOCAR O CAPACETE");		
 	}
 }
