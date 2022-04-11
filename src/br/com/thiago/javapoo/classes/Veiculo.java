@@ -4,8 +4,11 @@ import br.com.thiago.javaoo.excecoes.AbastecimentoVeiculoLigadoException;
 import br.com.thiago.javaoo.excecoes.AceleracaoVeiculoLigadoException;
 import br.com.thiago.javaoo.excecoes.ChassiInvalidoException;
 import br.com.thiago.javaoo.excecoes.FrenagemVeiculoException;
+import br.com.thiago.poo.interfaces.Andador;
+import br.com.thiago.poo.interfaces.Ligador;
+import br.com.thiago.poo.interfaces.VeiculoInterface;
 
-abstract public class Veiculo {
+abstract public class Veiculo implements VeiculoInterface, Ligador, Andador {
 
 	private String nome;
 	private String marca;
